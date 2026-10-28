@@ -1,2 +1,50 @@
-# physical-ai-robot-patrol
-AI-generated route planning and differential-drive robot simulation
+# Physical AI Robot Patrol
+
+生成AIで巡回経路を設計し、差動二輪ロボットが経路に沿って走行する様子をPythonでシミュレーションした作品です。
+
+## 目的
+
+地域施設などの見守り巡回を想定し、生成AIが作成した複数のチェックポイントをロボットが順番に巡回する仕組みを試作しました。
+
+## AIの活用
+
+生成AIを使用して、以下の巡回経路をJSON形式で作成しました。
+
+- Start
+- Checkpoint A
+- Checkpoint B
+- Checkpoint C
+- Startへ帰還
+
+生成された経路データをPythonで読み込み、ロボット制御へ利用しています。
+
+## 実装内容
+
+- Google Colab上でPythonを実行
+- 差動二輪ロボットを簡易モデル化
+- 目標地点との距離と角度から速度を計算
+- P制御による経路追従
+- Matplotlibによる走行アニメーション生成
+- MP4形式で実行結果を保存
+
+## ファイル構成
+
+- `physical_ai_robot_patrol.ipynb`：シミュレーションコード
+- `waypoints.json`：生成AIが作成した巡回経路
+- `robot_patrol.mp4`：ロボットの走行結果
+
+## 実行方法
+
+1. `physical_ai_robot_patrol.ipynb` をGoogle Colabで開く
+2. 上から順番にセルを実行する
+3. 経路データと走行動画が生成される
+
+## 結果と考察
+
+ロボットは生成された経路に沿って各チェックポイントを巡回し、Startへ戻ることができました。一方、単純なP制御のため、曲がり角では目標経路から少し膨らむ軌跡が確認されました。
+
+今後は速度調整やPID制御、障害物検知を追加することで、より正確で安全な巡回が可能になると考えます。
+
+## 今後の展開
+
+今回は期限と安全性を考慮してシミュレーションで検証しました。今後は購入したSO-101の組立てと安全確認を行い、実機を使ったPhysical AIの学習へ発展させる予定です。
