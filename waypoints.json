@@ -1,0 +1,32 @@
+{
+  "task": "地域施設内の見守り巡回",
+  "generated_by": "Generative AI",
+  "coordinate_unit": "meter",
+  "waypoints": [
+    {
+      "name": "Start",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "Checkpoint A",
+      "x": 3.0,
+      "y": 0.0
+    },
+    {
+      "name": "Checkpoint B",
+      "x": 3.0,
+      "y": 2.0
+    },
+    {
+      "name": "Checkpoint C",
+      "x": 0.0,
+      "y": 2.0
+    },
+    {
+      "name": "Goal",
+      "x": 0.0,
+      "y": 0.0
+    }
+  ]
+}
